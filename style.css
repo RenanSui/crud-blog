@@ -1,23 +1,13 @@
+/* Barlow font */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Quicksand font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
 /* Variables */
 :root {
 	--primary-color: #212529;
 	--secondary-color: #f8f8f8;
 }
-
-/* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* body {
-	background: hsla(350, 97%, 65%, 1);
-
-	background: linear-gradient(
-		135deg,
-		hsla(350, 97%, 65%, 1) 0%,
-		hsla(210, 11%, 15%, 1) 100%
-	);
-
-    background-repeat: no-repeat;
-} */
 
 /* Base styles */
 * {
@@ -29,23 +19,35 @@
 body {
 	font-family: 'Barlow', sans-serif;
 	background-color: var(--primary-color);
+	color: var(--secondary-color);
+}
+
+p {
+	word-break: break-all;
 }
 
 /* Form styles */
 form {
+	width: 500px;
 	display: flex;
 	flex-flow: column;
+	align-items: center;
 	color: var(--secondary-color);
 	text-align: center;
-	margin: 20px;
+	margin: 20px auto;
 }
 
-label{
-    border-bottom: 1px solid var(--secondary-color);
-    padding-bottom: 5px;
-    margin-bottom: 5px;
-    font-size: 20px;
-    font-weight: 100;
+form > * {
+	margin-bottom: 10px;
+}
+
+label {
+	border-bottom: 1px solid var(--secondary-color);
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	font-size: 20px;
+	font-weight: 100;
+	font-family: 'Quicksand', sans-serif;
 }
 
 input {
@@ -66,4 +68,116 @@ textarea {
 	background-color: var(--secondary-color);
 	color: var(--primary-color);
 	resize: none;
+}
+
+.submitBtn {
+	margin-top: 20px;
+	background-color: rgb(1, 173, 12);
+	border: none;
+	color: var(--secondary-color);
+	padding: 5px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	cursor: pointer;
+	width: 80px;
+}
+
+/* Blog posts */
+
+.single-post {
+	margin: 40px;
+}
+
+.delete {
+	display: flex;
+	justify-content: space-between;
+}
+
+.updateBtn {
+	background-color: #ada401;
+	border: none;
+	color: var(--secondary-color);
+	padding: 5px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.deleteBtn {
+	background-color: crimson;
+	border: none;
+	color: var(--secondary-color);
+	padding: 5px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+/* Modal for update request */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	border-radius: 10px;
+}
+
+/* The Close Button */
+.close {
+	color: var(--secondary-color);
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-content > input {
+	background-color: var(--secondary-color);
+}
+
+.modal-content > textarea {
+	background-color: var(--secondary-color);
+}
+
+.submitModal {
+	margin-top: 20px;
+	background-color: rgb(173, 159, 1);
+	border: none;
+	color: var(--secondary-color);
+	padding: 5px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	cursor: pointer;
+	width: 80px;
 }

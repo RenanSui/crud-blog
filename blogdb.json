@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "name": "AAA",
+      "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit illo reiciendis, est architecto nisi eveniet labore nostrum voluptatum corrupti magni hic atque perferendis voluptatibus ducimus consequuntur tenetur, accusantium porro vel similique! Iure animi, magni quod earum cumque tempore beatae odio explicabo cupiditate velit soluta quasi molestias nihil illum ipsa? Dolor?",
+      "id": 1
+    },
+    {
+      "name": "AA",
+      "message": "AAA",
+      "id": 2
+    }
+  ]
+}

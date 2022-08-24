@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,20 +9,38 @@
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <!-- JavaScript -->
-    <script src="App.js"></script>
+    <script src="App.js" defer></script>
 </head>
+
 <body>
     <div>
-        <form class>
+        <form class="myForm">
             <label for="first-name">Name:</label>
-            <input type="text" id="first-name" name="first-name" placeholder="Your first name..">
-            <label for="blog-field">Message:</label>
-            <textarea name="blog-field" id="blog-field" placeholder="Write something.."></textarea>
+            <input type="text" id="first-name" name="first-name" placeholder="Your first name.." required>
+            <label for="blog-message">Message:</label>
+            <textarea name="blog-message" id="blog-message" placeholder="Write something.." required></textarea>
+            <button type="submit" class="submitBtn">Submit</button>
         </form>
 
         <div class="blog-body">
-            
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form class="modalForm">
+                <label for="update-name">New name</label>
+                <input type="text" id="update-name" name="update-name" placeholder="Your first name.." required>
+                <label for="update-message">New message</label>
+                <textarea name="update-message" id="update-message" placeholder="Write something.." required></textarea>
+                <button type="submit" class="submitModal">Submit</button>
+            </form>
         </div>
+
     </div>
 </body>
+
 </html>
